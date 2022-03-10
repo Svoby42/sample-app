@@ -23,6 +23,10 @@ gem "turbo-rails", '~> 1.0.0'
 
 gem "bootstrap", '~> 5.0.1'
 
+gem "rdoc"
+gem "guard"
+gem "webpacker"
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
