@@ -23,6 +23,8 @@ gem "turbo-rails", '~> 1.0.0'
 
 gem "rails-controller-testing"
 
+gem "bcrypt"
+
 gem "bootstrap", '~> 5.0.1'
 
 gem "rdoc"
