@@ -30,6 +30,15 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
+  test "email must contain @ and must not contain any other special characters" do
+    invalid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
+                          first.last@foo.jp alice+bob@baz.cn]
+    invalid_addresses.each do |invalid_address|
+        @user.email = invalid_address
+        assert @user.valid?, "#{invalid_address.inspect} should be valid"
+      end
+  end
+
   # test "the truth" do
   #   assert true
   # end
