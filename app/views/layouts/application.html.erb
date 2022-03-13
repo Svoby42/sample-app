@@ -10,10 +10,11 @@
     <%= javascript_include_tag "application", "data-turbo-track":"reload", defer: true %>
   </head>
 
-  <body class="text-white">
+  <body class="text-dark">
   <%= render 'layouts/nav' %>
-  <div class="container">
+  <div class="container text-white">
     <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
   </div>
   </body>
 </html>
