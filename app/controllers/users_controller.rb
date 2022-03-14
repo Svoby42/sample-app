@@ -11,7 +11,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-
+      flash[:success] = "Vítejte"
+      redirect_to user_url(@user)
     else
       render 'new'
     end
@@ -24,3 +25,4 @@ class UsersController < ApplicationController
 
 
 end
+#434/915

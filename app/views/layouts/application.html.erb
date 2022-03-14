@@ -10,9 +10,14 @@
     <%= javascript_include_tag "application", "data-turbo-track":"reload", defer: true %>
   </head>
 
-  <body class="text-dark">
+  <body>
   <%= render 'layouts/nav' %>
   <div class="container text-white">
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>">
+        <%= message %>
+      </div>
+    <% end %>
     <%= yield %>
     <%= debug(params) if Rails.env.development? %>
   </div>
