@@ -5,13 +5,13 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get root" do
     get root_path
     assert_response :success
-    assert_select "title", "Domu | Ruby on Rails stránka"
+    assert_select "title", "Domů | Ruby on Rails stránka"
   end
 
   test "should get home" do
     get root_path
     assert_response :success
-    assert_select "title", "Domu | Ruby on Rails stránka"
+    assert_select "title", "Domů | Ruby on Rails stránka"
   end
 
   test "should get help" do
