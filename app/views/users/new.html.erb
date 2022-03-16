@@ -1,25 +1,7 @@
 <% content_for :title, "Sign up" %>
-
+<% provide(:button_text, "Vytvořit účet") %>
 <h1>Registrace</h1>
 
 <div class="row">
-  <%= form_with(model: @user, local: true) do |f| %>
-
-    <%= render 'shared/error_messages' %>
-
-    <%= f.label :name, "Jméno" %>
-    <%= f.text_field :name %>
-
-    <%= f.label :email, "E-mail" %>
-    <%= f.email_field :email %>
-
-    <%= f.label :password, "Heslo" %>
-    <%= f.password_field :password %>
-
-    <%= f.label :password_confirmation, "Potvrdit heslo" %>
-    <%= f.password_field :password_confirmation %>
-
-    <%= f.submit "Vytvořit účet", class: "btn btn-primary" %>
-  <% end %>
-
+  <%= render 'form' %>
 </div>

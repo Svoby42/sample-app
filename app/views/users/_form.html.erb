@@ -1,0 +1,17 @@
+<%= form_with(model: @user, local: true) do |f| %>
+  <%= render 'shared/error_messages' %>
+
+  <%= f.label :name, "Jméno" %>
+  <%= f.text_field :name, class: 'form-control' %>
+
+  <%= f.label :email, "E-mail" %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :password, "Heslo" %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.label :password_confirmation, "Potvrdit heslo" %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+  <%= f.submit "Uložit změny", class: "btn btn-primary" %>
+<% end %>
