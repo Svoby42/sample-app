@@ -7,6 +7,7 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 
 gem "sprockets-rails"
 gem "sqlite3", "~> 1.4"
+gem "faker"
 gem "puma", "~> 5.0"
 gem "importmap-rails"
 gem "turbo-rails", '~> 1.0.0'
@@ -21,7 +22,8 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
-
+gem "will_paginate", "3.3.0"
+gem "bootstrap-will_paginate", "1.0.0"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

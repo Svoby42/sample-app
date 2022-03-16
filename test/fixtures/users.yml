@@ -9,3 +9,20 @@ lumir:
   name: Lumír Práskal
   email: admin@svoby.eu
   password_digest: <%= User.digest('password') %>
+
+lena:
+  name: Lena Lama
+  email: lena@seznam.cz
+  password_digest: <%= User.digest('password') %>
+
+malory:
+  name: Malory Archer
+  email: malory@seznam.cz
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "Uzivatel #{n}" %>
+  email: <%= "uzivatel-#{n}@seznam.cz" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
