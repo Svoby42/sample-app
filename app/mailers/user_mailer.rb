@@ -2,7 +2,7 @@ class UserMailer < ApplicationMailer
 
   def account_activation(user)
     @user = user
-    mail to: user.mail, subject: "Aktivace účtu"
+    mail to: user.email, subject: "Aktivace účtu"
   end
 
   def password_reset
