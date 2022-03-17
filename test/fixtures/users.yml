@@ -4,26 +4,36 @@ michael:
   name: Petr Example
   email: konak410@seznam.cz
   password_digest: <%= User.digest('password') %>
-  admin: true
+  admin: true,
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 lumir:
   name: Lumír Práskal
   email: admin@svoby.eu
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 lena:
   name: Lena Lama
   email: lena@seznam.cz
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 malory:
   name: Malory Archer
   email: malory@seznam.cz
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 <% 30.times do |n| %>
 user_<%= n %>:
   name:  <%= "Uzivatel #{n}" %>
   email: <%= "uzivatel-#{n}@seznam.cz" %>
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>
