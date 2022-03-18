@@ -3,7 +3,6 @@ class PasswordResetsController < ApplicationController
   before_action :valid_user,        only: [:edit, :update]
   before_action :check_expiration,  only: [:edit, :update]
 
-
   def new
   end
 
@@ -29,6 +28,7 @@ class PasswordResetsController < ApplicationController
       render 'edit'
     elsif @user.update(user_params)
       log_in @user
+      @user.update_attribute(:reset_digest, nil)
       flash[:success] = "Heslo bylo obnoveno"
       redirect_to @user
     else
