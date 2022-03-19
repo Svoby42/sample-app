@@ -13,12 +13,18 @@ cat_video:
   created_at: <%= 2.hours.ago %>
   user: michael
 
+pokus:
+  content: "Test lena"
+  created_at: <%= 1.hours.ago %>
+  user: lena
+
 most_recent:
   content: "Writing a short test"
   created_at: <%= Time.zone.now %>
   user: michael
-  
-<% 30.times do |n| %>
+
+
+  <% 30.times do |n| %>
 micropost_<%= n %>:
   content:
       <%= Faker::Lorem.sentence(word_count: 5) %>

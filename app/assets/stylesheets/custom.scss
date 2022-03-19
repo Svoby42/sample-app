@@ -159,3 +159,11 @@ span.image {
     border: 0;
   }
 }
+
+li{
+  margin-left: 5px;
+}
+
+.active > a{
+  color: blue !important;
+}
