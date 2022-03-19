@@ -24,6 +24,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem "will_paginate", "3.3.0"
 gem "bootstrap-will_paginate", "1.0.0"
+gem "active_storage_validations", "0.8.2"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
